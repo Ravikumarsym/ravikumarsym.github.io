@@ -3,414 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>Ravi Kumar S · Android Developer Portfolio</title>
-    <!-- Font Awesome 6 (free) -->
+    <title>Ravi Kumar S · Senior Android Developer · Play Store Portfolio</title>
+    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Google Fonts: Inter + Space Grotesk -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        /* ---------- same robust, animated style — extended for more projects ---------- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            background: linear-gradient(145deg, #f8faff 0%, #f0f4fe 100%);
+            background: linear-gradient(145deg, #f6fafe 0%, #ecf3fc 100%);
             font-family: 'Inter', sans-serif;
-            color: #1a263b;
+            color: #172e44;
             line-height: 1.6;
             padding: 2rem 1.5rem;
-            animation: bgPulse 12s infinite alternate ease-in-out;
+            animation: bgPulse 14s infinite alternate ease-in-out;
         }
-
         @keyframes bgPulse {
-            0% { background: linear-gradient(145deg, #f8faff 0%, #f0f4fe 100%); }
-            100% { background: linear-gradient(225deg, #f3f7fd 0%, #e9eff9 100%); }
+            0% { background: linear-gradient(145deg, #f6fafe 0%, #ecf3fc 100%); }
+            100% { background: linear-gradient(225deg, #f0f7ff 0%, #e3edf9 100%); }
         }
-
         .container {
-            max-width: 1280px;
+            max-width: 1400px;
             margin: 0 auto;
-            background: rgba(255,255,255,0.68);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 48px 48px 48px 48px;
-            box-shadow: 0 20px 40px -12px rgba(0,20,50,0.12), 0 0 0 1px rgba(255,255,255,0.6);
-            padding: 2.8rem 2.4rem;
-            transition: box-shadow 0.4s;
-            border: 1px solid rgba(255,255,255,0.5);
+            background: rgba(255,255,255,0.7);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-radius: 56px 56px 56px 56px;
+            box-shadow: 0 24px 44px -16px rgba(18,52,77,0.16), 0 0 0 1px rgba(255,255,255,0.5);
+            padding: 2.8rem 2.6rem;
+            border: 1px solid rgba(255,255,255,0.6);
         }
-
-        /* floating animation for profile touch */
-        .profile-glow {
-            position: relative;
-            animation: floatGlow 6s infinite alternate;
-        }
-
+        .profile-glow { animation: floatGlow 7s infinite alternate; }
         @keyframes floatGlow {
             0% { transform: translateY(0px); opacity: 1; }
-            100% { transform: translateY(-4px); opacity: 0.98; }
+            100% { transform: translateY(-5px); opacity: 0.98; }
         }
-
-        h1, h2, h3, .badge, .year-pill {
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 600;
-            letter-spacing: -0.02em;
-        }
-
-        /* modern header */
+        h1, h2, h3, .badge, .year-pill { font-family: 'Space Grotesk', sans-serif; font-weight: 600; letter-spacing: -0.02em; }
+        
+        /* header & nav */
         .top-header {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
+            display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
             margin-bottom: 2.8rem;
         }
-
         .name-title h1 {
-            font-size: 3.2rem;
-            font-weight: 700;
-            line-height: 1;
-            color: #0b1e33;
-            letter-spacing: -0.03em;
+            font-size: 3.4rem; font-weight: 700; color: #0a253b; letter-spacing: -0.03em;
             animation: slideIn 0.8s cubic-bezier(0.16, 1, 0.2, 1);
         }
-
         .name-title .badge {
-            background: #1d3b5c;
-            color: white;
-            padding: 0.3rem 1rem;
-            border-radius: 50px;
-            font-size: 0.95rem;
-            font-weight: 500;
-            display: inline-block;
-            margin-top: 8px;
-            backdrop-filter: blur(4px);
-            box-shadow: 0 6px 12px rgba(27,55,96,0.08);
+            background: #1a405a; color: white; padding: 0.35rem 1.2rem; border-radius: 50px;
+            font-size: 1rem; font-weight: 500; display: inline-block; margin-top: 8px;
+            box-shadow: 0 6px 12px rgba(27,55,96,0.12);
         }
-
         .contact-pill-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem;
-            background: rgba(255,255,255,0.5);
-            backdrop-filter: blur(8px);
-            padding: 1rem 1.6rem;
-            border-radius: 80px;
-            border: 1px solid rgba(255,255,255,0.7);
-            animation: fadeSlide 0.9s;
+            display: flex; flex-wrap: wrap; gap: 0.9rem; background: rgba(255,255,255,0.6);
+            backdrop-filter: blur(8px); padding: 1rem 2rem; border-radius: 80px;
+            border: 1px solid rgba(255,255,255,0.7); animation: fadeSlide 0.9s;
         }
-
-        .contact-pill-group i {
-            margin-right: 6px;
-            color: #2b4f6e;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: #1f3545;
-        }
-
-        /* section animations */
+        .contact-item { display: flex; align-items: center; font-size: 0.96rem; font-weight: 500; color: #1e3e57; }
+        .contact-item i { margin-right: 6px; color: #1f5579; }
         @keyframes slideIn {
             0% { opacity: 0; transform: translateY(30px); }
             100% { opacity: 1; transform: translateY(0); }
         }
-
         @keyframes fadeSlide {
             0% { opacity: 0; transform: translateX(20px); }
             100% { opacity: 1; transform: translateX(0); }
         }
 
-        .section {
-            margin-top: 3rem;
-            animation: slideIn 0.6s ease-out;
-        }
-
+        /* section style */
+        .section { margin-top: 3.2rem; animation: slideIn 0.6s ease-out; }
         .section-title {
-            font-size: 1.6rem;
-            font-weight: 600;
-            color: #0a253b;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            border-bottom: 2px solid rgba(72, 123, 172, 0.2);
-            padding-bottom: 0.6rem;
-            margin-bottom: 1.8rem;
+            font-size: 1.7rem; font-weight: 600; color: #0a2b3f; display: flex; align-items: center;
+            gap: 12px; border-bottom: 2px solid rgba(72, 123, 172, 0.2); padding-bottom: 0.7rem;
+            margin-bottom: 2rem;
         }
+        .section-title i { color: #2f6680; font-size: 1.8rem; }
 
-        .section-title i {
-            color: #326a96;
-            font-size: 1.6rem;
-        }
-
-        /* profile summary */
+        /* profile card */
         .profile-text {
-            background: linear-gradient(105deg, #ffffff 0%, #f7fcff 100%);
-            padding: 1.8rem 2rem;
-            border-radius: 32px;
-            font-size: 1.1rem;
-            font-weight: 400;
-            border: 1px solid rgba(255,255,255,0.9);
-            box-shadow: 0 8px 18px -8px rgba(0,32,64,0.08);
-            backdrop-filter: blur(4px);
-            color: #1e364b;
-            line-height: 1.7;
+            background: linear-gradient(105deg, #ffffff 0%, #f6fcff 100%); padding: 1.8rem 2.2rem;
+            border-radius: 36px; font-size: 1.08rem; border: 1px solid rgba(255,255,255,0.9);
+            box-shadow: 0 8px 20px -10px rgba(22,78,105,0.08); color: #1e3a50;
         }
 
-        /* experience cards – interactive lift */
-        .exp-card {
-            background: white;
-            border-radius: 28px;
-            padding: 1.6rem 2rem;
-            margin-bottom: 1.2rem;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
-            border: 1px solid rgba(211, 226, 243, 0.6);
-            transition: all 0.25s cubic-bezier(0.2,0,0,1);
-            backdrop-filter: blur(6px);
-        }
-
-        .exp-card:hover {
-            transform: scale(1.01) translateY(-4px);
-            box-shadow: 0 24px 34px -10px rgba(34, 98, 143, 0.18);
-            border-color: rgba(129, 182, 219, 0.5);
-            background: rgba(255,255,255,0.9);
-        }
-
-        .exp-left h3 {
-            font-size: 1.3rem;
-            font-weight: 650;
-            color: #16344b;
-        }
-
-        .exp-company {
-            font-weight: 600;
-            color: #2a5779;
-            margin-top: 4px;
-        }
-
-        .exp-date {
-            background: #e6eef9;
-            padding: 0.5rem 1.2rem;
-            border-radius: 40px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            color: #1d4663;
-            letter-spacing: -0.01em;
-        }
-
-        /* project cards — animated lift & button reveal */
+        /* ---------- PROJECT GRID — 9+ CARDS, ALL PLAY STORE LINKS ACTIVATED ---------- */
         .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1.8rem;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem;
             margin-top: 0.8rem;
         }
-
         .project-card {
-            background: rgba(255,255,255,0.7);
-            backdrop-filter: blur(8px);
-            border-radius: 28px;
-            padding: 1.8rem 1.5rem;
-            border: 1px solid rgba(255,255,255,0.7);
-            box-shadow: 0 8px 20px -10px rgba(27,58,82,0.08);
-            transition: all 0.35s ease;
-            display: flex;
-            flex-direction: column;
-            position: relative;
+            background: rgba(255,255,255,0.75); backdrop-filter: blur(10px); border-radius: 32px;
+            padding: 1.8rem 1.5rem; border: 1px solid rgba(255,255,255,0.7);
+            box-shadow: 0 8px 22px -12px rgba(27,58,82,0.1); transition: all 0.3s ease;
+            display: flex; flex-direction: column;
         }
-
         .project-card:hover {
-            transform: translateY(-10px);
-            background: white;
-            box-shadow: 0 28px 36px -14px rgba(21, 94, 143, 0.2);
-            border-color: #bed6e7;
+            transform: translateY(-10px); background: white; box-shadow: 0 30px 40px -16px rgba(21,94,143,0.2);
+            border-color: #b2d3e8;
         }
-
-        .project-icon {
-            font-size: 2.2rem;
-            color: #2c6289;
-            margin-bottom: 0.6rem;
-        }
-
+        .project-icon { font-size: 2.2rem; color: #1f6085; margin-bottom: 0.8rem; }
         .project-title {
-            font-weight: 700;
-            font-size: 1.35rem;
-            margin-bottom: 0.3rem;
-            color: #0c2d42;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            font-weight: 700; font-size: 1.4rem; margin-bottom: 0.3rem; color: #0c2d42;
+            display: flex; align-items: center; gap: 8px;
         }
-
-        .project-desc {
-            color: #385f74;
-            font-size: 0.95rem;
-            margin: 0.6rem 0 0.8rem;
-        }
-
+        .project-desc { color: #2c556b; font-size: 0.94rem; margin: 0.6rem 0 1rem; line-height: 1.5; }
         .playstore-link {
-            margin-top: 0.8rem;
-            opacity: 0;
-            transform: translateY(8px);
-            transition: opacity 0.3s ease, transform 0.3s ease;
-            font-weight: 600;
-            background: #1e3b4f;
-            color: white;
-            padding: 0.5rem 1.2rem;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 0.9rem;
-            display: inline-block;
-            align-self: flex-start;
-            text-decoration: none;
-            border: none;
-            box-shadow: 0 6px 12px rgba(35, 117, 152, 0.2);
+            margin-top: 0.4rem; opacity: 0; transform: translateY(8px); transition: opacity 0.25s ease, transform 0.25s ease;
+            font-weight: 600; background: #1c4b63; color: white; padding: 0.5rem 1.3rem; border-radius: 60px;
+            text-align: center; font-size: 0.9rem; display: inline-block; align-self: flex-start;
+            text-decoration: none; border: none; box-shadow: 0 8px 16px rgba(25,95,122,0.2);
         }
+        .project-card:hover .playstore-link { opacity: 1; transform: translateY(0); }
+        .playstore-link i { margin-right: 6px; }
 
-        .project-card:hover .playstore-link {
-            opacity: 1;
-            transform: translateY(0);
+        /* experience hover */
+        .exp-card {
+            background: white; border-radius: 28px; padding: 1.6rem 2rem; margin-bottom: 1.2rem;
+            display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+            border: 1px solid rgba(211, 226, 243, 0.6); transition: all 0.25s cubic-bezier(0.2,0,0,1);
         }
-
-        .playstore-link i {
-            margin-right: 6px;
+        .exp-card:hover {
+            transform: scale(1.01) translateY(-4px); box-shadow: 0 22px 34px -12px rgba(34,98,143,0.18);
+            border-color: rgba(99, 165, 211, 0.5); background: white;
         }
+        .exp-left h3 { font-size: 1.32rem; font-weight: 650; color: #153e58; }
+        .exp-company { font-weight: 600; color: #266080; margin-top: 5px; }
+        .exp-date { background: #e1edf5; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight: 600; font-size: 0.9rem; color: #1a4a66; }
 
-        /* skills cloud – interactive bubble pulse */
-        .skills-cloud {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.9rem;
-            margin-top: 0.8rem;
-        }
-
+        /* skill bubbles interactive */
+        .skills-cloud { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-top: 1rem; }
         .skill-bubble {
-            background: linear-gradient(145deg, #e2ecf5, #d1e2ef);
-            padding: 0.6rem 1.6rem;
-            border-radius: 60px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: #12344a;
-            border: 1px solid rgba(255,255,255,0.6);
-            transition: all 0.2s ease;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
-            backdrop-filter: blur(2px);
+            background: linear-gradient(145deg, #dfecf2, #d0e2ec); padding: 0.55rem 1.6rem; border-radius: 60px;
+            font-size: 0.94rem; font-weight: 600; color: #0f344b; border: 1px solid rgba(255,255,255,0.6);
+            transition: all 0.2s ease; backdrop-filter: blur(2px);
         }
-
         .skill-bubble:hover {
-            background: #1d4a66;
-            color: white;
-            transform: scale(1.14);
-            border-color: #558daa;
-            box-shadow: 0 12px 18px -6px #1a4c6390;
+            background: #1d4e68; color: white; transform: scale(1.12); border-color: #609bb3;
+            box-shadow: 0 10px 18px -8px #1a4f6390;
         }
-
-        /* toolkit / secondary skills */
         .toolkit-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem 2.4rem;
-            background: rgba(255,255,255,0.4);
-            backdrop-filter: blur(6px);
-            padding: 1.5rem 1.8rem;
-            border-radius: 48px;
-            margin-top: 1.4rem;
+            display: flex; flex-wrap: wrap; gap: 1.8rem 3rem; background: rgba(255,255,255,0.5);
+            backdrop-filter: blur(8px); padding: 1.6rem 2rem; border-radius: 48px; margin-top: 1.8rem;
         }
-
-        .toolkit-cat {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .toolkit-cat span:first-child {
-            font-weight: 700;
-            color: #1a4356;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.03em;
-        }
-
-        .toolkit-cat strong {
-            font-weight: 700;
-            color: #0a2e45;
-            font-size: 1rem;
-        }
+        .toolkit-cat { display: flex; flex-direction: column; }
+        .toolkit-cat span:first-child { font-weight: 700; color: #164b60; font-size: 0.78rem; text-transform: uppercase; }
+        .toolkit-cat strong { font-weight: 700; color: #0d3348; font-size: 1rem; }
 
         /* nav smooth */
         .sticky-nav {
-            display: flex;
-            gap: 2rem;
-            margin-bottom: 2rem;
-            padding: 0.4rem 0.2rem;
-            border-bottom: 1px solid rgba(90, 140, 180, 0.2);
+            display: flex; gap: 2.2rem; margin-bottom: 2rem; padding: 0.5rem 0.2rem;
+            border-bottom: 1px solid rgba(74, 128, 161, 0.2);
         }
-
         .nav-link {
-            text-decoration: none;
-            font-weight: 600;
-            color: #1f3d54;
-            background: transparent;
-            padding: 0.4rem 0.2rem;
-            border-bottom: 2px solid transparent;
-            transition: 0.2s;
-            font-size: 1.05rem;
-            cursor: pointer;
+            text-decoration: none; font-weight: 600; color: #1e405a; background: transparent;
+            padding: 0.4rem 0.2rem; border-bottom: 2px solid transparent; transition: 0.2s;
+            font-size: 1.05rem; cursor: pointer;
         }
+        .nav-link:hover { border-bottom-color: #3f80a3; color: #0b2d44; }
 
-        .nav-link:hover {
-            border-bottom-color: #3e7a99;
-            color: #0a3144;
-        }
+        hr { border: none; height: 1px; background: linear-gradient(to right, transparent, #aac1d4, transparent); margin: 2rem 0 0.8rem; }
+        .footer-quote { font-size: 0.92rem; text-align: center; color: #386478; margin-top: 2.5rem; font-style: italic; }
 
-        /* responsive */
         @media (max-width: 700px) {
-            .container { padding: 1.8rem; }
-            .name-title h1 { font-size: 2.4rem; }
+            .container { padding: 1.8rem; } .name-title h1 { font-size: 2.4rem; }
             .top-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
         }
-
-        hr {
-            border: none;
-            height: 1px;
-            background: linear-gradient(to right, transparent, #aac1d4, transparent);
-            margin: 2rem 0 0.5rem;
-        }
-
-        .footer-quote {
-            font-size: 0.9rem;
-            text-align: center;
-            color: #3f627a;
-            margin-top: 2.5rem;
-            font-style: italic;
-        }
-
-        .fa-google-play { color: #fff; }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- smooth scroll nav -->
+        <!-- smooth nav -->
         <div class="sticky-nav">
             <a class="nav-link" onclick="document.getElementById('profile').scrollIntoView({behavior:'smooth', block:'center'});"><i class="fas fa-user-astronaut" style="margin-right: 6px;"></i>Profile</a>
-            <a class="nav-link" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth', block:'center'});"><i class="fas fa-cubes"></i> Projects</a>
+            <a class="nav-link" onclick="document.getElementById('playstore-projects').scrollIntoView({behavior:'smooth', block:'center'});"><i class="fab fa-google-play"></i> Play Store Apps</a>
             <a class="nav-link" onclick="document.getElementById('experience').scrollIntoView({behavior:'smooth', block:'center'});"><i class="fas fa-briefcase"></i> Experience</a>
             <a class="nav-link" onclick="document.getElementById('skills').scrollIntoView({behavior:'smooth', block:'center'});"><i class="fas fa-code"></i> Skills</a>
         </div>
 
-        <!-- HEADER with animation + contact pill -->
+        <!-- HEADER -->
         <div class="top-header">
             <div class="name-title profile-glow">
                 <h1>RAVI KUMAR S</h1>
-                <span class="badge"><i class="fas fa-android" style="margin-right: 6px;"></i>SOFTWARE DEVELOPER · 7+ YRS</span>
+                <span class="badge"><i class="fas fa-android" style="margin-right: 8px;"></i>SOFTWARE DEVELOPER · 7+ YRS</span>
             </div>
             <div class="contact-pill-group">
                 <span class="contact-item"><i class="fas fa-phone-alt"></i> +91 63813 89861</span>
@@ -420,90 +195,125 @@
             </div>
         </div>
 
-        <!-- PROFILE ZONE animated -->
+        <!-- PROFILE -->
         <div id="profile" class="section">
             <div class="section-title"><i class="fas fa-address-card"></i> PROFILE</div>
             <div class="profile-text">
-                With over <strong>7+ years</strong> of experience, I specialize in creating user‑friendly, high‑performance applications with modern Android tech. Deep expertise in <strong>push, geofencing, payment processing, maps, video call APIs, QR scanners, Paypal, Stripe, Firebase</strong>. Passionate about architectural improvements, clean code, and team leadership.
+                With over <strong>7+ years</strong> of experience, I specialize in creating user‑friendly, high‑performance applications with modern Android tech. Deep expertise in <strong>push, geofencing, payment processing, maps, video call APIs, QR, Paypal, Stripe, Firebase</strong>. Passionate about architectural improvements, clean code, and team leadership. <strong>7+ published apps on Google Play</strong> including social, taxi, e‑commerce, health and family network.
             </div>
         </div>
 
-        <!-- PROJECTS – two specific play store apps + others from resume -->
-        <div id="projects" class="section">
-            <div class="section-title"><i class="fas fa-rocket"></i> PROJECTS · FEATURED APPS</div>
+        <!-- ========== PLAY STORE PROJECTS – 7 SPECIFIC APPS + OTHERS ========== -->
+        <div id="playstore-projects" class="section">
+            <div class="section-title"><i class="fab fa-google-play"></i> GOOGLE PLAY · SHIPPED APPS</div>
             <div class="project-grid">
-                <!-- THIRUKKURAL – specific project 1 -->
+                <!-- 1. Thirukural Tamil (already) -->
                 <div class="project-card">
                     <div class="project-icon"><i class="fas fa-book-open"></i></div>
-                    <div class="project-title">1330 Thirukural Tamil</div>
-                    <div class="project-desc">Offline Thirukural app with 4 author meanings (Parimelazhagar, etc). Search by word, number, Iyal. 4.7⭐ on Play Store.</div>
+                    <div class="project-title">1330 Thirukural</div>
+                    <div class="project-desc">Offline Thirukural with 4 author meanings (Parimelazhagar). Search by word, number, Iyal. 4.7⭐.</div>
                     <a href="https://play.google.com/store/apps/details?id=com.tamilthirukkural.thirukkuralbook&hl=en_IN" target="_blank" class="playstore-link"><i class="fab fa-google-play"></i> View on Play Store</a>
                 </div>
-                <!-- MEETDOC – specific project 2 -->
+                <!-- 2. MeetDoc (doctor booking) -->
                 <div class="project-card">
                     <div class="project-icon"><i class="fas fa-stethoscope"></i></div>
                     <div class="project-title">MeetDoc</div>
-                    <div class="project-desc">Doctor appointment booking, instant booking, internal messaging, availability, payment gateway. Used by doctors & patients.</div>
+                    <div class="project-desc">Doctor appointment booking, instant booking, internal messaging, availability, payment gateway.</div>
                     <a href="https://play.google.com/store/apps/details?id=com.hitasoft.app.meetdoc&hl=en_IN" target="_blank" class="playstore-link"><i class="fab fa-google-play"></i> View on Play Store</a>
                 </div>
-                <!-- other featured projects from resume -->
+                <!-- 3. Howzu – dating / realtime chat (NEW) -->
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-heart"></i></div>
+                    <div class="project-title">Howzu</div>
+                    <div class="project-desc">Real‑time dating & chat. Advanced search, unlimited likes, image sharing, NodeJs backend, swipe filters.</div>
+                    <a href="https://play.google.com/store/apps/details?id=com.hitasoft.app.howzu&hl=en_IN" target="_blank" class="playstore-link"><i class="fab fa-google-play"></i> View on Play Store</a>
+                </div>
+                <!-- 4. Cabso Driver (NEW) -->
                 <div class="project-card">
                     <div class="project-icon"><i class="fas fa-taxi"></i></div>
-                    <div class="project-title">Taxi Booking App</div>
-                    <div class="project-desc">Toll integration, payment gateway, Stripe, gift cards, split order, MVVM, zoom video call.</div>
+                    <div class="project-title">Cabso Driver</div>
+                    <div class="project-desc">On‑demand taxi booking – MEAN stack based. Driver app, location tracking, trip management.</div>
+                    <a href="https://play.google.com/store/apps/details?id=com.hitasoft.driver.cabso&hl=en_IN" target="_blank" class="playstore-link"><i class="fab fa-google-play"></i> View on Play Store</a>
                 </div>
+                <!-- 5. JoySale (NEW - ecommerce) -->
                 <div class="project-card">
-                    <div class="project-icon"><i class="fas fa-stream"></i></div>
-                    <div class="project-title">Live Streaming App</div>
-                    <div class="project-desc">Implemented at Hitasoft, full streaming features, push, dynamic theme, autocomplete.</div>
+                    <div class="project-icon"><i class="fas fa-tags"></i></div>
+                    <div class="project-title">JoySale</div>
+                    <div class="project-desc">E‑commerce marketplace app. Smooth product listing, cart & secure payments.</div>
+                    <a href="https://play.google.com/store/apps/details?id=com.hitasoft.app.joysale&hl=en_IN" target="_blank" class="playstore-link"><i class="fab fa-google-play"></i> View on Play Store</a>
                 </div>
+                <!-- 6. Getherly: Family Network (NEW) -->
                 <div class="project-card">
-                    <div class="project-icon"><i class="fas fa-pizza-slice"></i></div>
-                    <div class="project-title">Food Delivery / E‑Commerce</div>
-                    <div class="project-desc">Multiple apps with payment integration, subscription, GraphQL, Firebase.</div>
+                    <div class="project-icon"><i class="fas fa-tree"></i></div>
+                    <div class="project-title">Getherly</div>
+                    <div class="project-desc">Private family social network. Family Forest, digital legacy, short‑form video, encrypted messaging.</div>
+                    <a href="https://play.google.com/store/apps/details?id=com.getherly.app&hl=en_IN" target="_blank" class="playstore-link"><i class="fab fa-google-play"></i> View on Play Store</a>
                 </div>
+                <!-- 7. Pappaai (NEW - Maitsys) -->
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-baby-carriage"></i></div>
+                    <div class="project-title">Pappaai</div>
+                    <div class="project-desc">Parenting / family companion (Maitsys). Built with modern Android, MVVM.</div>
+                    <a href="https://play.google.com/store/apps/details?id=com.maitsys.pappaai&hl=en_IN" target="_blank" class="playstore-link"><i class="fab fa-google-play"></i> View on Play Store</a>
+                </div>
+                <!-- 8. NFT / Wallet Connect project (resume highlight) -->
                 <div class="project-card">
                     <div class="project-icon"><i class="fas fa-wallet"></i></div>
                     <div class="project-title">NFT · Wallet Connect</div>
                     <div class="project-desc">End‑to‑end ownership, Wallet Connect integration, NFT projects, stakeholder management.</div>
                 </div>
+                <!-- 9. Live Streaming App (from resume) -->
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-video"></i></div>
+                    <div class="project-title">Live Streaming</div>
+                    <div class="project-desc">Hitasoft streaming app, push, dynamic theme, autocomplete, video call APIs.</div>
+                </div>
+                <!-- 10. Food Delivery / E‑Commerce (umbrella) -->
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-utensils"></i></div>
+                    <div class="project-title">Food Delivery / E‑Comm</div>
+                    <div class="project-desc">Payment integration, subscription, gift card, split order, GraphQL.</div>
+                </div>
             </div>
         </div>
 
-        <!-- WORK EXPERIENCE – hover lift -->
+        <!-- WORK EXPERIENCE (highlighting role in these apps) -->
         <div id="experience" class="section">
             <div class="section-title"><i class="fas fa-briefcase"></i> WORK EXPERIENCE</div>
+            <!-- Maitsys – Getherly + Pappaai revamp -->
             <div class="exp-card">
                 <div class="exp-left">
                     <h3>Sr. Android Developer</h3>
-                    <div class="exp-company">Maitsys · Getherly (Instagram‑based)</div>
+                    <div class="exp-company">Maitsys · Getherly & Pappaai</div>
                 </div>
                 <div class="exp-date">NOV 2024 – PRESENT</div>
-                <div style="width:100%; margin-top: 10px; color:#2a4d64;"><i class="fas fa-code-branch"></i> Revamped with Kotlin, MVVM, modern practices – performance & scalability.</div>
+                <div style="width:100%; margin-top: 12px; color:#235973;"><i class="fas fa-code-branch"></i> Revamped Getherly (family network) with Kotlin, MVVM. Performance, scalability. Contributed to Pappaai.</div>
             </div>
+            <!-- Hitasoft – MeetDoc, Howzu, Cabso, JoySale, Streaming -->
             <div class="exp-card">
                 <div class="exp-left">
                     <h3>Sr. Android Developer</h3>
-                    <div class="exp-company">Hitasoft Technologies Pvt Ltd</div>
+                    <div class="exp-company">Hitasoft Technologies · MeetDoc, Howzu, Cabso, JoySale</div>
                 </div>
                 <div class="exp-date">JUN 2023 – JUN 2024</div>
-                <div style="width:100%; margin-top: 10px; color:#2a4d64;"><i class="fas fa-video"></i> Streaming‑based app features, MeetDoc maintenance & new modules.</div>
+                <div style="width:100%; margin-top: 12px; color:#235973;">Developed & maintained features for streaming, doctor booking (MeetDoc), dating app (Howzu), taxi driver (Cabso) & JoySale e‑commerce.</div>
             </div>
+            <!-- Trioangle (Team Lead) NFT and core apps -->
             <div class="exp-card">
                 <div class="exp-left">
                     <h3>Team Lead</h3>
                     <div class="exp-company">Trioangle Technologies</div>
                 </div>
                 <div class="exp-date">FEB 2022 – JUN 2023</div>
-                <div style="width:100%; margin-top: 10px; color:#2a4d64;">Led full‑cycle projects, secure Android apps, NFT (Wallet Connect), mobile token security.</div>
+                <div style="width:100%; margin-top: 12px; color:#235973;">Led full‑cycle secure Android apps, NFT / Wallet Connect, mobile token, stakeholder management.</div>
             </div>
             <div class="exp-card">
                 <div class="exp-left">
                     <h3>Sr. Android Developer</h3>
-                    <div class="exp-company">Trioangle Technologies Pvt Ltd</div>
+                    <div class="exp-company">Trioangle Technologies</div>
                 </div>
                 <div class="exp-date">NOV 2020 – FEB 2022</div>
-                <div style="width:100%; margin-top: 10px; color:#2a4d64;">Android SDK, Kotlin, Java, RESTful, NFT projects, end‑to‑end ownership.</div>
+                <div style="width:100%; margin-top: 12px; color:#235973;">Android SDK, Kotlin, Java, RESTful, NFT projects, end‑to‑end ownership.</div>
             </div>
             <div class="exp-card">
                 <div class="exp-left">
@@ -511,92 +321,59 @@
                     <div class="exp-company">GTech Solutions</div>
                 </div>
                 <div class="exp-date">MAY 2018 – OCT 2020</div>
-                <div style="width:100%; margin-top: 10px; color:#2a4d64;">Advanced apps, unit testing, bug fixing, external APIs, robust UX.</div>
+                <div style="width:100%; margin-top: 12px; color:#235973;">Built advanced Android apps, unit testing, external APIs, robust UX.</div>
             </div>
         </div>
 
-        <!-- SKILLS – interactive bubbles with pulse on hover, plus toolkit -->
+        <!-- SKILLS cloud with interactive bubbles -->
         <div id="skills" class="section">
-            <div class="section-title"><i class="fas fa-cog"></i> SKILLS · CLOUD</div>
+            <div class="section-title"><i class="fas fa-cog"></i> SKILLS · TECH STACK</div>
             <div class="skills-cloud">
-                <span class="skill-bubble">Java</span>
-                <span class="skill-bubble">Kotlin</span>
-                <span class="skill-bubble">Jetpack Compose</span>
-                <span class="skill-bubble">Android SDK</span>
-                <span class="skill-bubble">MVVM</span>
-                <span class="skill-bubble">Hilt</span>
-                <span class="skill-bubble">Coroutines</span>
-                <span class="skill-bubble">Dagger</span>
-                <span class="skill-bubble">Nav Graph</span>
-                <span class="skill-bubble">RESTful</span>
-                <span class="skill-bubble">GraphQL</span>
-                <span class="skill-bubble">Firebase</span>
-                <span class="skill-bubble">XMPP</span>
-                <span class="skill-bubble">Google Maps</span>
-                <span class="skill-bubble">Facebook API</span>
-                <span class="skill-bubble">Instagram</span>
-                <span class="skill-bubble">Stripe</span>
-                <span class="skill-bubble">PayPal</span>
-                <span class="skill-bubble">Braintree</span>
-                <span class="skill-bubble">Razorpay</span>
-                <span class="skill-bubble">Flutterwave</span>
-                <span class="skill-bubble">PayU</span>
-                <span class="skill-bubble">CI/CD</span>
-                <span class="skill-bubble">Jira</span>
-                <span class="skill-bubble">GitHub</span>
-                <span class="skill-bubble">Bitbucket</span>
-                <span class="skill-bubble">Smart Git</span>
-                <span class="skill-bubble">Agile</span>
-                <span class="skill-bubble">OOPS</span>
-                <span class="skill-bubble">Flutter</span>
+                <span class="skill-bubble">Java</span> <span class="skill-bubble">Kotlin</span> <span class="skill-bubble">Jetpack Compose</span>
+                <span class="skill-bubble">Android SDK</span> <span class="skill-bubble">MVVM</span> <span class="skill-bubble">Hilt</span>
+                <span class="skill-bubble">Coroutines</span> <span class="skill-bubble">Dagger</span> <span class="skill-bubble">Nav Graph</span>
+                <span class="skill-bubble">RESTful</span> <span class="skill-bubble">GraphQL</span> <span class="skill-bubble">Firebase</span>
+                <span class="skill-bubble">XMPP</span> <span class="skill-bubble">Google Maps</span> <span class="skill-bubble">Facebook API</span>
+                <span class="skill-bubble">Instagram</span> <span class="skill-bubble">Stripe</span> <span class="skill-bubble">PayPal</span>
+                <span class="skill-bubble">Braintree</span> <span class="skill-bubble">Razorpay</span> <span class="skill-bubble">Flutterwave</span>
+                <span class="skill-bubble">PayU</span> <span class="skill-bubble">CI/CD</span> <span class="skill-bubble">Jira</span>
+                <span class="skill-bubble">GitHub</span> <span class="skill-bubble">Bitbucket</span> <span class="skill-bubble">Agile</span>
+                <span class="skill-bubble">Flutter</span> <span class="skill-bubble">OneSignal</span> <span class="skill-bubble">AdMob</span>
             </div>
-
-            <!-- additional frameworks / tools in refined row -->
             <div class="toolkit-row">
-                <div class="toolkit-cat">
-                    <span>Payment Gateways</span>
-                    <strong>Stripe, PayPal, Flutterwave, Payu, Braintree, Razorpay</strong>
-                </div>
-                <div class="toolkit-cat">
-                    <span>Platforms</span>
-                    <strong>Firebase, OneSignal, GCM, AdMob</strong>
-                </div>
-                <div class="toolkit-cat">
-                    <span>Paradigms</span>
-                    <strong>OOP, Agile, MVVM, Hilt, Coroutines, Dagger, Nav Graph</strong>
-                </div>
+                <div class="toolkit-cat"><span>Payment Gateways</span><strong>Stripe, PayPal, Flutterwave, Payu, Braintree, Razorpay</strong></div>
+                <div class="toolkit-cat"><span>Platforms</span><strong>Firebase, OneSignal, GCM, AdMob</strong></div>
+                <div class="toolkit-cat"><span>Paradigms</span><strong>OOP, Agile, MVVM, Hilt, Coroutines, Dagger, Nav Graph</strong></div>
             </div>
         </div>
 
-        <!-- strengths / languages footer like resume -->
+        <!-- STRENGTHS / LANGUAGES and custom tags -->
         <hr>
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin-top: 1rem;">
-            <div style="display: flex; gap: 2.4rem; flex-wrap: wrap;">
-                <div><span style="font-weight: 700; color: #16445c;"><i class="fas fa-language"></i> LANGUAGES</span> <span style="margin-left: 0.8rem; background: #e6f0f5; padding: 0.3rem 1rem; border-radius: 40px; font-weight: 600;">Tamil · English</span></div>
-                <div><span style="font-weight: 700; color: #16445c;"><i class="fas fa-bolt"></i> STRENGTHS</span> 
-                    <span style="margin-left: 0.8rem; display: inline-flex; gap: 0.6rem;">
-                        <span class="skill-bubble" style="background: #e0ebf2; padding: 0.2rem 1.2rem;">Problem Solving</span>
-                        <span class="skill-bubble" style="background: #e0ebf2; padding: 0.2rem 1.2rem;">Willingness to Learn</span>
-                        <span class="skill-bubble" style="background: #e0ebf2; padding: 0.2rem 1.2rem;">Team Facilitator</span>
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; margin-top: 0.8rem;">
+            <div style="display: flex; gap: 2.5rem; flex-wrap: wrap;">
+                <div><span style="font-weight: 700; color: #124452;"><i class="fas fa-language"></i> LANGUAGES</span> <span style="margin-left: 0.8rem; background: #e2eef5; padding: 0.3rem 1.2rem; border-radius: 40px; font-weight: 600;">Tamil · English</span></div>
+                <div><span style="font-weight: 700; color: #124452;"><i class="fas fa-bolt"></i> STRENGTHS</span> 
+                    <span style="margin-left: 0.8rem; display: inline-flex; gap: 0.7rem;">
+                        <span class="skill-bubble" style="background: #ddebf2; padding: 0.25rem 1.2rem;">Problem Solving</span>
+                        <span class="skill-bubble" style="background: #ddebf2; padding: 0.25rem 1.2rem;">Willingness to Learn</span>
+                        <span class="skill-bubble" style="background: #ddebf2; padding: 0.25rem 1.2rem;">Team Facilitator</span>
                     </span>
                 </div>
             </div>
-            <div style="color: #325f78; padding-top: 0.5rem;">
+            <div style="color: #235f78; padding-top: 0.5rem; font-weight: 500;">
                 <i class="fas fa-check-circle"></i> Toll Integration · Gift Card · Split order · Zoom video · Wallet Connect
             </div>
         </div>
 
-        <!-- tiny footer, inspired by contact from resume -->
+        <!-- FOOTER with play store count -->
         <div class="footer-quote">
-            <i class="fas fa-mobile-alt"></i> Android expert · MVVM · Kotlin · NFC · payment stacks · available for opportunities
+            <i class="fas fa-mobile-alt"></i> 7+ published Play Store apps: Thirukural, MeetDoc, Howzu, Cabso Driver, JoySale, Getherly, Pappaai · MVVM · Kotlin · available
         </div>
     </div>
 
-    <!-- tiny script for smooth scroll – already inline -->
     <script>
-        // ensure any nav link click is smooth (already in onclick)
-        // additional hover polish
-        console.log("Portfolio ready — animations live. Thirukural & MeetDoc cards with play store links.");
+        // smooth scroll from nav – already in onclick; peace
+        console.log("Ravi Kumar · full Play Store portfolio with 7 specific apps + links");
     </script>
 </body>
 </html>
