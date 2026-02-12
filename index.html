@@ -1,48 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Your Name - Portfolio</title>
-    <style>
-        body {
-            font-family: Arial;
-            text-align: center;
-            padding: 50px;
-            background-color: #f4f4f4;
-        }
-        h1 {
-            color: #333;
-        }
-        .project {
-            background: white;
-            padding: 20px;
-            margin: 20px auto;
-            width: 60%;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        a {
-            text-decoration: none;
-            color: blue;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ravikumar</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <h1>Your Name</h1>
-    <p>Web Developer | Designer | Your Title</p>
+    <!-- ===== HEADER ===== -->
+    <header id="hero">
+        <div class="container">
+            <h1>Hello, I’m <span>Ravi kumar</span></h1>
+            <p>Android Developer | UI/UX Enthusiast </p>
+        </div>
+    </header>
 
-    <h2>Projects</h2>
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="container">
+        <h2>About Me</h2>
+        <p>
+            I’m a passionate Android developer with experience building responsive websites.
+            I love coding, creativity, and learning new tech.
+        </p>
+    </section>
 
-    <div class="project">
-        <h3>Project 1</h3>
-        <p>Short description of your project.</p>
-        <a href="#">View Project</a>
-    </div>
+    <!-- ===== PROJECTS ===== -->
+    <section id="project" class="container">
+        <h2>Projects</h2>
 
-    <div class="project">
-        <h3>Project 2</h3>
-        <p>Short description of your project.</p>
-        <a href="#">View Project</a>
-    </div>
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <div class="project-image"></div>
+                <h3>Project Title 1</h3>
+                <p>Short description of what the project does.</p>
+                <a href="#" class="btn">View Project</a> 
+            </div>
+
+            <div class="project-card">
+                <div class="project-image"></div>
+                <h3>Project Title 2</h3>
+                <p>Short description of what the project does.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image"></div>
+                <h3>Project Title 3</h3>
+                <p>Short description of what the project does.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="container">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:sravikumar6997@example.com">sravikumar6997@example.com</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Ravikumar</p>
+    </footer>
 
 </body>
 </html>
