@@ -4,145 +4,86 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ravi Kumar | Senior Android Engineer</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-
-<div class="gradient-bg"></div>
-<div class="particles"></div>
 
 <nav>
     <div class="logo">Ravi Kumar</div>
     <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
-        <button id="themeToggle">🌙</button>
     </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero reveal">
-    <div class="hero-left">
-        <h1>Senior Android Engineer</h1>
-        <p>7+ Years building scalable mobile systems, secure payment flows, and high-performance architecture.</p>
-        <div class="hero-buttons">
-            <a href="#projects" class="btn primary">View Projects</a>
-            <a href="Ravikumar_resume2026.pdf" download class="btn outline">Download Resume</a>
-        </div>
-    </div>
-
-    <div class="hero-right glass">
-        <div class="stat">
-            <h2 class="counter" data-target="7">0</h2>
-            <p>Years Experience</p>
-        </div>
-        <div class="stat">
-            <h2 class="counter" data-target="25">0</h2>
-            <p>Apps Delivered</p>
-        </div>
-        <div class="stat">
-            <h2 class="counter" data-target="100">0</h2>
-            <p>% Commitment</p>
-        </div>
-    </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="section glass reveal">
-    <h2>About Me</h2>
+    <h1>Senior Android Engineer</h1>
     <p>
-        Senior Android Developer specializing in Kotlin, MVVM, payment systems, live streaming,
-        and cloud-integrated mobile ecosystems. Strong architectural mindset with leadership experience.
+        7+ years building scalable Android apps with Kotlin, MVVM architecture,
+        and secure payment integrations.
     </p>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="section reveal">
-    <h2>Core Expertise</h2>
-
-    <div class="skill">
-        <span>Kotlin</span>
-        <div class="bar"><div class="fill" style="width:95%"></div></div>
-    </div>
-
-    <div class="skill">
-        <span>MVVM + Hilt</span>
-        <div class="bar"><div class="fill" style="width:92%"></div></div>
-    </div>
-
-    <div class="skill">
-        <span>Payment Integrations</span>
-        <div class="bar"><div class="fill" style="width:90%"></div></div>
-    </div>
-
-    <div class="skill">
-        <span>Firebase & APIs</span>
-        <div class="bar"><div class="fill" style="width:88%"></div></div>
-    </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section id="experience" class="section glass reveal">
-    <h2>Experience</h2>
-
-    <div class="timeline">
-        <div class="timeline-item">
-            <h3>Sr. Android Developer — Maitsys</h3>
-            <span>2024 - Present</span>
-        </div>
-
-        <div class="timeline-item">
-            <h3>Sr. Android Developer — Hitasoft</h3>
-            <span>2023 - 2024</span>
-        </div>
-
-        <div class="timeline-item">
-            <h3>Team Lead — Trioangle</h3>
-            <span>2022 - 2023</span>
-        </div>
-    </div>
+    <a href="#projects" class="btn">View My Work ↓</a>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="section reveal">
-    <h2>Featured Projects</h2>
+<section id="projects" class="section">
+    <h2 class="section-title reveal">Featured Projects</h2>
 
-    <div class="projects">
-
-        <div class="project-card tilt">
+    <div class="project-card reveal">
+        <div class="project-content">
             <h3>Taxi Booking Platform</h3>
-            <p>Real-time GPS tracking, Stripe payments, push notifications, scalable MVVM architecture.</p>
+            <p>
+                Built a real-time ride booking app with Google Maps integration,
+                Stripe payments, push notifications, and scalable MVVM architecture.
+            </p>
+            <span>Kotlin • MVVM • Firebase • Stripe</span>
         </div>
-
-        <div class="project-card tilt">
-            <h3>Food Delivery Ecosystem</h3>
-            <p>Split orders, subscription logic, Razorpay integration, REST APIs.</p>
-        </div>
-
-        <div class="project-card tilt">
-            <h3>Live Streaming App</h3>
-            <p>Zoom SDK, geofencing, QR scanning, Firebase real-time backend.</p>
-        </div>
-
     </div>
+
+    <div class="project-card reveal">
+        <div class="project-content">
+            <h3>Food Delivery Ecosystem</h3>
+            <p>
+                Designed complete ordering system with subscription model,
+                split-order logic, and Razorpay payment gateway integration.
+            </p>
+            <span>Kotlin • REST APIs • Razorpay</span>
+        </div>
+    </div>
+
+    <div class="project-card reveal">
+        <div class="project-content">
+            <h3>Live Streaming App</h3>
+            <p>
+                Developed scalable streaming platform with Zoom SDK integration,
+                geofencing, QR scanner, and Firebase real-time backend.
+            </p>
+            <span>Zoom SDK • Firebase • Real-time DB</span>
+        </div>
+    </div>
+
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section light reveal">
+    <h2 class="section-title">Experience Snapshot</h2>
+    <p>Sr. Android Developer — Maitsys (2024 - Present)</p>
+    <p>Sr. Android Developer — Hitasoft (2023 - 2024)</p>
+    <p>Team Lead — Trioangle Technologies (2022 - 2023)</p>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section glass reveal">
-    <h2>Contact</h2>
-    <p>📧 sravikumar6997@gmail.com</p>
-    <p>📍 Madurai, Tamil Nadu</p>
-    <p>📞 +91 63813 89861</p>
+<section id="contact" class="section reveal">
+    <h2 class="section-title">Let’s Connect</h2>
+    <p>Email: sravikumar6997@gmail.com</p>
+    <p>Location: Madurai, Tamil Nadu</p>
 </section>
 
 <footer>
-    © 2026 Ravi Kumar — Built with Precision
+    © 2026 Ravi Kumar
 </footer>
 
 <script src="script.js"></script>
