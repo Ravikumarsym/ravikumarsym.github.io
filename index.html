@@ -71,6 +71,49 @@
             100% { opacity: 1; transform: translateX(0); }
         }
 
+        /* ---------- DOWNLOAD RESUME BUTTON – NEW: stylish, always visible, with hover effect ---------- */
+        .resume-download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(145deg, #1d4e68, #0f3a4f);
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 0.7rem 1.8rem;
+            border-radius: 60px;
+            border: none;
+            box-shadow: 0 10px 18px -6px #0a2f40, 0 0 0 1px rgba(255,255,255,0.3) inset;
+            transition: all 0.25s ease;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.3px;
+            margin-left: 0.5rem;
+            border: 1px solid rgba(255,255,255,0.4);
+            text-decoration: none;
+        }
+        .resume-download-btn i {
+            font-size: 1.1rem;
+            color: #ffdb8e;
+        }
+        .resume-download-btn:hover {
+            background: linear-gradient(145deg, #266480, #154a5e);
+            transform: translateY(-3px);
+            box-shadow: 0 20px 24px -10px #124c61;
+            border-color: rgba(255,215,100,0.6);
+        }
+        .resume-download-btn:active {
+            transform: translateY(0px);
+            box-shadow: 0 10px 18px -6px #0f3849;
+        }
+        /* adjust header flex for button */
+        .action-group {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 1rem;
+        }
+
         /* section style */
         .section { margin-top: 3.2rem; animation: slideIn 0.6s ease-out; }
         .section-title {
@@ -168,6 +211,7 @@
         @media (max-width: 700px) {
             .container { padding: 1.8rem; } .name-title h1 { font-size: 2.4rem; }
             .top-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+            .action-group { width: 100; justify-content: flex-start; }
         }
     </style>
 </head>
@@ -181,21 +225,26 @@
             <a class="nav-link" onclick="document.getElementById('skills').scrollIntoView({behavior:'smooth', block:'center'});"><i class="fas fa-code"></i> Skills</a>
         </div>
 
-        <!-- HEADER -->
+        <!-- HEADER with DOWNLOAD RESUME BUTTON integrated -->
         <div class="top-header">
             <div class="name-title profile-glow">
-    <h1>RAVI KUMAR S</h1>
-    <span class="badge">
-        <i class="fab fa-android"></i>
-        Senior Android Engineer · 7+ Years
-    </span>
-</div>
-               
-            <div class="contact-pill-group">
-                <span class="contact-item"><i class="fas fa-phone-alt"></i> +91 63813 89861</span>
-                <span class="contact-item"><i class="fas fa-phone-alt"></i> +91 84897 87360</span>
-                <span class="contact-item"><i class="fas fa-envelope"></i> sravikumar6997@gmail.com</span>
-                <span class="contact-item"><i class="fas fa-map-pin"></i> Madurai, TN</span>
+                <h1>RAVI KUMAR S</h1>
+                <span class="badge">
+                    <i class="fab fa-android"></i>
+                    Senior Android Engineer · 7+ Years
+                </span>
+            </div>
+            <div class="action-group">
+                <!-- NEW DOWNLOAD RESUME BUTTON — triggers download -->
+                <button id="downloadResumeBtn" class="resume-download-btn">
+                    <i class="fas fa-file-pdf"></i> Download Resume
+                </button>
+                <div class="contact-pill-group">
+                    <span class="contact-item"><i class="fas fa-phone-alt"></i> +91 63813 89861</span>
+                    <span class="contact-item"><i class="fas fa-phone-alt"></i> +91 84897 87360</span>
+                    <span class="contact-item"><i class="fas fa-envelope"></i> sravikumar6997@gmail.com</span>
+                    <span class="contact-item"><i class="fas fa-map-pin"></i> Madurai, TN</span>
+                </div>
             </div>
         </div>
 
@@ -203,75 +252,76 @@
         <div id="profile" class="section">
             <div class="section-title"><i class="fas fa-address-card"></i> PROFILE</div>
             <div class="profile-text">
-               Senior Android Engineer with over 7 years of experience delivering enterprise-grade mobile applications and leading development initiatives. Adept at translating business requirements into scalable mobile architectures, mentoring junior developers, and collaborating cross-functionally to drive product success. Specialized in Kotlin-based Android development, payment ecosystems, and performance optimization strategies that enhance user engagement and operational reliability.            </div>
+               Senior Android Engineer with over 7 years of experience delivering enterprise-grade mobile applications and leading development initiatives. Adept at translating business requirements into scalable mobile architectures, mentoring junior developers, and collaborating cross-functionally to drive product success. Specialized in Kotlin-based Android development, payment ecosystems, and performance optimization strategies that enhance user engagement and operational reliability.
+            </div>
         </div>
 
         <!-- ========== PLAY STORE PROJECTS – 7 SPECIFIC APPS + OTHERS ========== -->
         <div id="playstore-projects" class="section">
             <div class="section-title"><i class="fab fa-google-play"></i> GOOGLE PLAY · SHIPPED APPS</div>
             <div class="project-grid">
-                <!-- 1. Thirukural Tamil (already) -->
+                <!-- 1. Thirukural Tamil -->
                 <div class="project-card">
                     <div class="project-icon"><i class="fas fa-book-open"></i></div>
                     <div class="project-title">1330 Thirukural</div>
                     <div class="project-desc">Offline Thirukural with 4 author meanings (Parimelazhagar). Search by word, number, Iyal. 4.7⭐.</div>
                     <a href="https://play.google.com/store/apps/details?id=com.tamilthirukkural.thirukkuralbook&hl=en_IN" target="_blank" class="playstore-link"><i class="fab fa-google-play"></i> View on Play Store</a>
                 </div>
-                <!-- 2. MeetDoc (doctor booking) -->
+                <!-- 2. MeetDoc -->
                 <div class="project-card">
                     <div class="project-icon"><i class="fas fa-stethoscope"></i></div>
                     <div class="project-title">MeetDoc</div>
                     <div class="project-desc">Doctor appointment booking, instant booking, internal messaging, availability, payment gateway.</div>
                     <a href="https://play.google.com/store/apps/details?id=com.hitasoft.app.meetdoc&hl=en_IN" target="_blank" class="playstore-link"><i class="fab fa-google-play"></i> View on Play Store</a>
                 </div>
-                <!-- 3. Howzu – dating / realtime chat (NEW) -->
+                <!-- 3. Howzu -->
                 <div class="project-card">
                     <div class="project-icon"><i class="fas fa-heart"></i></div>
                     <div class="project-title">Howzu</div>
                     <div class="project-desc">Real‑time dating & chat. Advanced search, unlimited likes, image sharing, NodeJs backend, swipe filters.</div>
                     <a href="https://play.google.com/store/apps/details?id=com.hitasoft.app.howzu&hl=en_IN" target="_blank" class="playstore-link"><i class="fab fa-google-play"></i> View on Play Store</a>
                 </div>
-                <!-- 4. Cabso Driver (NEW) -->
+                <!-- 4. Cabso Driver -->
                 <div class="project-card">
                     <div class="project-icon"><i class="fas fa-taxi"></i></div>
                     <div class="project-title">Cabso Driver</div>
                     <div class="project-desc">On‑demand taxi booking – Driver app, location tracking, trip management.</div>
                     <a href="https://play.google.com/store/apps/details?id=com.hitasoft.driver.cabso&hl=en_IN" target="_blank" class="playstore-link"><i class="fab fa-google-play"></i> View on Play Store</a>
                 </div>
-                <!-- 5. JoySale (NEW - ecommerce) -->
+                <!-- 5. JoySale -->
                 <div class="project-card">
                     <div class="project-icon"><i class="fas fa-tags"></i></div>
                     <div class="project-title">JoySale</div>
                     <div class="project-desc">E‑commerce marketplace app. Smooth product listing, cart & secure payments.</div>
                     <a href="https://play.google.com/store/apps/details?id=com.hitasoft.app.joysale&hl=en_IN" target="_blank" class="playstore-link"><i class="fab fa-google-play"></i> View on Play Store</a>
                 </div>
-                <!-- 6. Getherly: Family Network (NEW) -->
+                <!-- 6. Getherly -->
                 <div class="project-card">
                     <div class="project-icon"><i class="fas fa-tree"></i></div>
                     <div class="project-title">Getherly</div>
                     <div class="project-desc">Private family social network. Family Forest, digital legacy, short‑form video, encrypted messaging.</div>
                     <a href="https://play.google.com/store/apps/details?id=com.getherly.app&hl=en_IN" target="_blank" class="playstore-link"><i class="fab fa-google-play"></i> View on Play Store</a>
                 </div>
-                <!-- 7. Pappaai (NEW - Maitsys) -->
+                <!-- 7. Pappaai -->
                 <div class="project-card">
                     <div class="project-icon"><i class="fas fa-baby-carriage"></i></div>
                     <div class="project-title">Pappaai</div>
                     <div class="project-desc">Parenting / family companion (Maitsys). Built with modern Android, MVVM.</div>
                     <a href="https://play.google.com/store/apps/details?id=com.maitsys.pappaai&hl=en_IN" target="_blank" class="playstore-link"><i class="fab fa-google-play"></i> View on Play Store</a>
                 </div>
-                <!-- 8. NFT / Wallet Connect project (resume highlight) -->
+                <!-- 8. NFT / Wallet Connect -->
                 <div class="project-card">
                     <div class="project-icon"><i class="fas fa-wallet"></i></div>
                     <div class="project-title">NFT · Wallet Connect</div>
                     <div class="project-desc">End‑to‑end ownership, Wallet Connect integration, NFT projects, stakeholder management.</div>
                 </div>
-                <!-- 9. Live Streaming App (from resume) -->
+                <!-- 9. Live Streaming App -->
                 <div class="project-card">
                     <div class="project-icon"><i class="fas fa-video"></i></div>
                     <div class="project-title">Live Streaming</div>
                     <div class="project-desc">Hitasoft streaming app, push, dynamic theme, autocomplete, video call APIs.</div>
                 </div>
-                <!-- 10. Food Delivery / E‑Commerce (umbrella) -->
+                <!-- 10. Food Delivery / E‑Commerce -->
                 <div class="project-card">
                     <div class="project-icon"><i class="fas fa-utensils"></i></div>
                     <div class="project-title">Food Delivery / E‑Comm</div>
@@ -280,11 +330,10 @@
             </div>
         </div>
 
-        <!-- WORK EXPERIENCE (highlighting role in these apps) -->
-         <!-- WORK EXPERIENCE (highlighting role in these apps) -->
+        <!-- WORK EXPERIENCE -->
         <div id="experience" class="section">
             <div class="section-title"><i class="fas fa-briefcase"></i> WORK EXPERIENCE</div>
-            <!-- Maitsys – Getherly + Pappaai revamp -->
+            <!-- Maitsys -->
             <div class="exp-card">
                 <div class="exp-left">
                     <h3>Sr. Android Developer</h3>
@@ -293,7 +342,7 @@
                 <div class="exp-date">NOV 2024 – PRESENT</div>
                 <div style="width:100%; margin-top: 12px; color:#235973;"><i class="fas fa-code-branch"></i> Revamped Getherly (family network) with Kotlin, MVVM. Performance, scalability. Contributed to Pappaai.</div>
             </div>
-            <!-- Hitasoft – MeetDoc, Howzu, Cabso, JoySale, Streaming -->
+            <!-- Hitasoft -->
             <div class="exp-card">
                 <div class="exp-left">
                     <h3>Sr. Android Developer</h3>
@@ -302,7 +351,7 @@
                 <div class="exp-date">JUN 2023 – JUN 2024</div>
                 <div style="width:100%; margin-top: 12px; color:#235973;">Developed & maintained features for streaming, doctor booking (MeetDoc), dating app (Howzu), taxi driver (Cabso) & JoySale e‑commerce.</div>
             </div>
-            <!-- Trioangle (Team Lead) NFT and core apps -->
+            <!-- Trioangle Team Lead -->
             <div class="exp-card">
                 <div class="exp-left">
                     <h3>Team Lead</h3>
@@ -328,8 +377,8 @@
                 <div style="width:100%; margin-top: 12px; color:#235973;">Built advanced Android apps, unit testing, external APIs, robust UX.</div>
             </div>
         </div>
-        
-        <!-- SKILLS cloud with interactive bubbles -->
+
+        <!-- SKILLS cloud -->
         <div id="skills" class="section">
             <div class="section-title"><i class="fas fa-cog"></i> SKILLS · TECH STACK</div>
             <div class="skills-cloud">
@@ -344,16 +393,15 @@
                 <span class="skill-bubble">GitHub</span> <span class="skill-bubble">Bitbucket</span> <span class="skill-bubble">Agile</span>
                 <span class="skill-bubble">Flutter</span> <span class="skill-bubble">OneSignal</span> <span class="skill-bubble">AdMob</span> 
                 <span class="skill-bubble">Clean Architecture</span> <span class="skill-bubble">WorkManager</span> <span class="skill-bubble">Room Database</span> 
-                 <span class="skill-bubble">Navigation Component</span> <span class="skill-bubble">LiveData</span> <span class="skill-bubble">Flow</span> 
+                <span class="skill-bubble">Navigation Component</span> <span class="skill-bubble">LiveData</span> <span class="skill-bubble">Flow</span> 
                 <span class="skill-bubble">JSON parsing</span> <span class="skill-bubble">RecyclerView</span> <span class="skill-bubble">Data Binding / View Binding</span>
                 <span class="skill-bubble">Navigation Component</span> <span class="skill-bubble">Zoom SDK Integration</span> <span class="skill-bubble">Flow</span> 
-                 <span class="skill-bubble">Firebase Cloud Messaging (Push)</span> <span class="skill-bubble">Firestore / Realtime DB</span> <span class="skill-bubble">ConstraintLayout</span> 
-                 <span class="skill-bubble">Background Services</span> <span class="skill-bubble">Deep Linking</span> <span class="skill-bubble">In-App Purchases</span> 
-
+                <span class="skill-bubble">Firebase Cloud Messaging (Push)</span> <span class="skill-bubble">Firestore / Realtime DB</span> <span class="skill-bubble">ConstraintLayout</span> 
+                <span class="skill-bubble">Background Services</span> <span class="skill-bubble">Deep Linking</span> <span class="skill-bubble">In-App Purchases</span> 
             </div>
         </div>
 
-        <!-- STRENGTHS / LANGUAGES and custom tags -->
+        <!-- STRENGTHS / LANGUAGES -->
         <hr>
         <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; margin-top: 0.8rem;">
             <div style="display: flex; gap: 2.5rem; flex-wrap: wrap;">
@@ -368,15 +416,38 @@
             </div>
         </div>
 
-        <!-- FOOTER with play store count -->
+        <!-- FOOTER -->
         <div class="footer-quote">
             <i class="fas fa-mobile-alt"></i> 50+ published Play Store apps: Thirukural, MeetDoc, Howzu, Cabso Driver, JoySale, Getherly, Pappaai...
         </div>
     </div>
 
     <script>
-        // smooth scroll from nav – already in onclick; peace
-        console.log("Ravi Kumar · full Play Store portfolio with 7 specific apps + links");
+        // SMOOTH SCROLL (already working via onclick)
+
+        // ----------------- RESUME DOWNLOAD FUNCTIONALITY -----------------
+        document.getElementById('downloadResumeBtn').addEventListener('click', function(e) {
+            // In a real scenario, replace this with actual PDF file.
+            // Using sample PDF (blank but triggers download) - You should host your real resume PDF.
+            // For demo, we generate a fake PDF download with filename "Ravi_Kumar_S_Resume.pdf"
+            
+            // OPTION 1: Direct link to PDF if hosted online
+            // window.open('path/to/your/resume.pdf', '_blank');
+            
+            // OPTION 2: Trigger download via Blob (simulated PDF)
+            // This creates a dummy text file - replace with actual file
+            
+            const link = document.createElement('a');
+            link.href = 'data:application/octet-stream,%48%65%6c%6c%6f%2c%20this%20is%20a%20sample%20resume%20-%20Ravi%20Kumar%20S%0A%20Senior%20Android%20Engineer'; // "Hello, this is a sample resume"
+            link.download = 'Ravi_Kumar_S_Android_Resume.pdf';  // filename for download
+            link.click();
+            
+            // FOR PRODUCTION: Replace the href with your actual PDF URL
+            // Example: link.href = 'https://yourwebsite.com/resume.pdf';
+            
+            // Optional user feedback
+            alert('Downloading Ravi Kumar Resume (sample). Please replace with your actual PDF link.');
+        });
     </script>
 </body>
 </html>
